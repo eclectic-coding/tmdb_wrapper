@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "tmdb_wrapper/version"
+require "faraday"
+require "faraday_middleware"
+require "tmdb_wrapper/version"
 
 module TmdbWrapper
-  class Error < StandardError; end
-  # Your code goes here...
+  autoload :Client, 'tmdb_wrapper/client'
+  autoload :Error, 'tmdb_wrapper/error'
 end
