@@ -7,4 +7,5 @@ require "tmdb_wrapper/version"
 module TmdbWrapper
   autoload :Client, 'tmdb_wrapper/client'
   autoload :Error, 'tmdb_wrapper/error'
+  autoload :Object, 'tmdb_wrapper/object'
 end
