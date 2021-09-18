@@ -10,6 +10,6 @@ require "tmdb_wrapper"
 # (If you use this, don't forget to add pry to your Gemfile!)
 # require "pry"
 # Pry.start
-
+client = TmdbWrapper::Client.new(api_key: ENV["TMDB_API_KEY"])
 require "irb"
 IRB.start(__FILE__)

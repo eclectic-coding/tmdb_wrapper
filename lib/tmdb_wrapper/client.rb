@@ -1,9 +1,9 @@
-require 'faraday'
-require 'faraday_middleware'
+require "faraday"
+require "faraday_middleware"
 
 module TmdbWrapper
   class Client
-    BASE_URL = 'https://api.themoviedb.org/3/'
+    BASE_URL = "https://api.themoviedb.org/3/"
 
     attr_reader :api_key, :adapter
 
@@ -12,11 +12,15 @@ module TmdbWrapper
       @adapter = adapter
     end
 
+    def movie
+      MovieResource.new(self)
+    end
+
     def connection
       @connection ||= Faraday.new do |conn|
         conn.url_prefix = BASE_URL
         conn.request :json
-        conn.response :json, content_type: 'application/json'
+        conn.response :json, content_type: "application/json"
         conn.adapter adapter
       end
     end
