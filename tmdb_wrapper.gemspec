@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "Write a longer description or delete this line."
   spec.homepage = "https://github.com/eclectic-coding/tmdb_wrapper"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.4.0"
+  spec.required_ruby_version = ">= 3.0.1"
 
   # spec.metadata["allowed_push_host"] = "Set to 'https://mygemserver.com'"
 

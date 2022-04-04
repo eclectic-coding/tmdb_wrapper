@@ -13,7 +13,7 @@ module TmdbWrapper
     end
 
     def movie
-      MovieResource.new(self)
+      MoviesResource.new(self)
     end
 
     def connection
